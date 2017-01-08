@@ -45,7 +45,7 @@ public class BungeeListener implements Listener {
     @EventHandler
     public void onKick(ServerKickEvent ev) {
         ProxiedPlayer p = ev.getPlayer();
-        m.sendMessage(p.getName() + " was kicked from " + ev.getKickedFrom() + " for "  + ev.getKickReason(), p.getName());
+        m.sendMessage(p.getName() + " was kicked from " + ev.getKickedFrom().getName() + " for "  + ev.getKickReason(), p.getName());
     }
 
 }

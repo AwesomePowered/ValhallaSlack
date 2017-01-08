@@ -15,7 +15,7 @@ import java.net.URL;
  */
 public class Messenger {
 
-    String hookMessages = "https://hooks.slack.com/services/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";
+    String hookMessages = "https://hooks.slack.com/services/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";
     String hookResponses = "https://hooks.slack.com/services/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";
     String playerHead = "https://cravatar.eu/helmavatar/MHF_ArrowRight/100.png";
     String headTemplate = "https://cravatar.eu/helmhead/%REPLACE/100.png";
@@ -31,14 +31,14 @@ public class Messenger {
     public void sendMessage(String m, String player) {
         JsonObject jo = new JsonObject();
         jo.addProperty("username", player);
-        jo.addProperty("text", m);
+        jo.addProperty("text", m.replace("&", "%26"));
         jo.addProperty("icon_url", headTemplate.replace("%REPLACE", player));
         doPost("payload=" + jo.toString(), hookMessages);
     }
 
 
     public void doPost(final String message, final String channel) {
-        ProxyServer.getInstance().getScheduler().runAsync(ValhallaSlack.instance,new Runnable() {
+        ProxyServer.getInstance().getScheduler().runAsync(ValhallaSlack.instance, new Runnable() {
             @Override
             public void run() {
                 try {

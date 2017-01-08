@@ -42,7 +42,6 @@
                     <configuration>
                         <artifactSet>
                             <includes>
-
                                 <include>org.eclipse.jetty:jetty-*:jar:*</include>
                                 <include>javax.servlet:javax.servlet-api:jar:*</include>
                             </includes>
@@ -85,6 +84,11 @@
         <groupId>org.eclipse.jetty.orbit</groupId>
         <artifactId>javax.servlet</artifactId>
         <version>3.0.0.v201112011016</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>3.4</version>
     </dependency>
 </dependencies>
 </project>

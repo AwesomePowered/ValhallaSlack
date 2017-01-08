@@ -33,7 +33,7 @@ public class SlackListener extends AbstractHandler {
         res.setCharacterEncoding("utf8");
         request.setHandled(true);
         if (target.equalsIgnoreCase("/slack")) {
-            if (!req.getParameter("key").equals("CurrentlyDisabled.")) {
+            if (!req.getParameter("key").equals("SomeRandomStringHere")) {
                 return;
             }
             //String test = req.getParameter("text");
